@@ -36,7 +36,10 @@ fi
 # colabfold patches
 echo "Applying several patches to Alphafold..."
 pushd ${ALPHAFOLD_DIR}
-
+# copy colabfold.py and colabfold_alphafold.py from ColabFold
+cp ${COLABFOLD_DIR}/beta/colabfold.py .
+cp ${COLABFOLD_DIR}/beta/colabfold_alphafold.py .
+cp ${COLABFOLD_DIR}/beta/pairmsa.py .
 # donwload reformat.pl from hh-suite
 wget -qnc https://raw.githubusercontent.com/soedinglab/hh-suite/master/scripts/reformat.pl
 # Apply multi-chain patch from Lim Heo @huhlim
